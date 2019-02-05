@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #B2DFDB;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView layoutX="36.0" layoutY="216.0">
+               <image>
+                  <Image url="@Assets/HireFromUs_White_Large.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="LoginPane" layoutX="300.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Pane prefHeight="70.0" prefWidth="400.0" style="-fx-background-color: #009688;">
+               <children>
+                  <Label layoutX="156.0" layoutY="10.0" text="Login" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Light" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXPasswordField fx:id="PasswordInput" layoutX="54.0" layoutY="192.0" prefWidth="300.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="UserNameInput" layoutX="54.0" layoutY="140.0" prefHeight="27.0" prefWidth="300.0" promptText="Username">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="106.0" layoutY="310.0" onAction="#UserLogin" prefHeight="27.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <Hyperlink alignment="TOP_CENTER" layoutX="138.0" layoutY="361.0" onAction="#ForgotPassword" prefHeight="25.0" prefWidth="136.0" text="Forgot password?" underline="true" />
+            <Label fx:id="ValidationMessage" layoutX="54.0" layoutY="123.0" prefHeight="17.0" prefWidth="300.0" text="Validation Error" textFill="RED" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

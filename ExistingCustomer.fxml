@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExistingCustomerController">
+   <top>
+      <HBox alignment="TOP_RIGHT" spacing="4.0" style="-fx-background-color: #009688;" BorderPane.alignment="CENTER">
+         <children>
+            <Region layoutX="417.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" />
+            <ImageView>
+               <image>
+                  <Image url="@Assets/HireFromUs_White_32.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="28.0" prefWidth="16.0" />
+            <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" layoutX="95.0" layoutY="26.0" text="Hire_From_Us" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Region prefHeight="28.0" prefWidth="80.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="LoggedInUser" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" text="Loged in as: John Smith" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton onAction="#LogOut" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Region layoutX="174.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="16.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox style="-fx-background-color: #009688;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#GoBack" prefHeight="35.0" prefWidth="200.0" styleClass="BackButton" stylesheets="@Main.css" text="Back" textFill="WHITE" />
+            <Region prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#DeleteCustomer" prefHeight="35.0" prefWidth="200.0" styleClass="CancelButton" stylesheets="@Main.css" text="Delete" textFill="WHITE" />
+            <JFXButton layoutX="610.0" layoutY="10.0" onAction="#EditCustomer" prefHeight="35.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Edit" textFill="WHITE" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <Accordion prefHeight="316.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Search Existing Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField layoutX="12.0" layoutY="50.0" prefHeight="25.0" prefWidth="175.0" promptText="search" />
+                        <JFXButton layoutX="12.0" layoutY="86.0" prefHeight="35.0" prefWidth="175.0" styleClass="ConfirmButton" stylesheets="@Main.css" text="Search" />
+                        <JFXComboBox layoutX="12.0" layoutY="14.0" prefHeight="25.0" prefWidth="175.0" promptText="Select Search Type" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="Add New Customer">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton layoutX="12.0" layoutY="14.0" prefHeight="35.0" prefWidth="175.0" styleClass="MenuButton" stylesheets="@Main.css" text="+ Add New Customer" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

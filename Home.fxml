@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #B2DFDB;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+   <children>
+      <Pane layoutX="300.0" layoutY="63.0" prefHeight="475.0" prefWidth="400.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="64.0">
+         <children>
+            <Pane prefHeight="120.0" prefWidth="400.0" style="-fx-background-color: #009688;">
+               <children>
+                  <Label layoutX="121.0" layoutY="14.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LoggedInUser" alignment="CENTER" layoutX="121.0" layoutY="67.0" prefHeight="27.0" prefWidth="158.0" text="User Name" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="305.0" layoutY="61.0" onAction="#LogOut" stylesheets="@Main.css" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <VBox fx:id="MainMenu" layoutX="100.0" layoutY="120.0" prefHeight="357.0" prefWidth="200.0" spacing="16.0">
+               <children>
+                  <JFXButton onAction="#MakeNewHire" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="New Hire" />
+                  <JFXButton layoutX="10.0" layoutY="26.0" onAction="#ReturnCar" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Return Car" />
+                  <JFXButton layoutX="10.0" layoutY="82.0" onAction="#OpenSettings" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Settings" />
+                  <JFXButton layoutX="10.0" layoutY="138.0" onAction="#TestStuff" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Testing ConfirmBox" visible="false" />
+                  <JFXButton layoutX="10.0" layoutY="194.0" onAction="#TestDiag" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Testing DialogBox" visible="false" />
+               </children>
+               <padding>
+                  <Insets top="16.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="SettingsMenu" layoutX="100.0" layoutY="120.0" prefHeight="357.0" prefWidth="200.0" spacing="16.0" visible="false">
+               <children>
+                  <JFXButton onAction="#EditExistingHire" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Edit Existing Hire" />
+                  <JFXButton onAction="#EditExistingCustomer" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Edit Existing Customer" />
+                  <JFXButton fx:id="manageUsersButton" disable="true" layoutX="10.0" layoutY="138.0" onAction="#ManageUsers" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Manage Users" />
+                  <JFXButton fx:id="manageCarsButton" disable="true" layoutX="10.0" layoutY="194.0" onAction="#ManageCars" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Manage Cars" />
+                  <JFXButton fx:id="dataAnalysisButton" disable="true" layoutX="10.0" layoutY="250.0" onAction="#ViewData" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Data Analysis" />
+                  <JFXButton layoutX="10.0" layoutY="250.0" onAction="#CloseSettings" prefHeight="40.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Back" />
+               </children>
+               <padding>
+                  <Insets top="16.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView layoutX="36.0" layoutY="216.0">
+               <image>
+                  <Image url="@Assets/HireFromUs_White_Large.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

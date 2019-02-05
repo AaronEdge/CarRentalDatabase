@@ -1,0 +1,27 @@
+/* 
+    Created on : 21-Apr-2018, 19:40:51
+    Author     : Aaron Edge (113612)
+
+    File taken from: http://tech.chitgoks.com/2013/07/08/how-to-create-confirm-dialog-window-in-java-fx-2/
+*/
+
+.root {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0);
+    -fx-background-radius: 0;
+    -fx-padding: 8;
+    -fx-border-color: #607D8B;
+    -fx-text-alignment: center;
+}
+
+.content {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-padding: 8;
+    -fx-text-alignment: center ;
+}
+
+.okButton {
+    -fx-background-color: #8BC34A;
+    -fx-text-fill: #ffffff;
+}

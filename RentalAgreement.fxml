@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RentalAgreementController">
+      <top>
+      <HBox alignment="TOP_RIGHT" spacing="4.0" style="-fx-background-color: #009688;" BorderPane.alignment="CENTER">
+         <children>
+            <Region layoutX="417.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" />
+            <ImageView>
+               <image>
+                  <Image url="@Assets/HireFromUs_White_32.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="28.0" prefWidth="16.0" />
+            <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" layoutX="95.0" layoutY="26.0" text="Hire_From_Us" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Region prefHeight="28.0" prefWidth="80.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="LoggedInUser" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" text="Loged in as: John Smith" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton onAction="#LogOut" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Region layoutX="174.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="16.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox style="-fx-background-color: #009688;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#GoBack" prefHeight="35.0" prefWidth="200.0" styleClass="BackButton" stylesheets="@Main.css" text="&lt; Back" textFill="WHITE" />
+            <Region prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#GoNext" prefHeight="35.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Done" textFill="WHITE" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TextFlow fx:id="agreementDisplay" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <JFXCheckBox fx:id="AgreementSigned" text="Agreement Signed" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+            <Label text="Customer Rental Agreement" textFill="#575757" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#PrintRentalAgreement" prefHeight="35.0" prefWidth="175.0" styleClass="ConfirmButton" stylesheets="@Main.css" text="Print Rental Agreement" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="16.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

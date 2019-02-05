@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddNewCarController">
+   <top>
+      <HBox alignment="TOP_RIGHT" spacing="4.0" style="-fx-background-color: #009688;" BorderPane.alignment="CENTER">
+         <children>
+            <Region layoutX="417.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" />
+            <ImageView>
+               <image>
+                  <Image url="@Assets/HireFromUs_White_32.png" />
+               </image>
+            </ImageView>
+            <Region prefHeight="28.0" prefWidth="16.0" />
+            <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" layoutX="95.0" layoutY="26.0" text="Hire_From_Us" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Region prefHeight="28.0" prefWidth="80.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="LoggedInUser" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" text="Loged in as: John Smith" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton onAction="#LogOut" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Region layoutX="174.0" layoutY="14.0" prefHeight="28.0" prefWidth="16.0" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="16.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox style="-fx-background-color: #009688;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#GoBack" prefHeight="35.0" prefWidth="200.0" styleClass="CancelButton" stylesheets="@Main.css" text="Cancel" textFill="WHITE" />
+            <Region prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#SaveCar" prefHeight="35.0" prefWidth="200.0" styleClass="MenuButton" stylesheets="@Main.css" text="Save" textFill="WHITE" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="14.0" layoutY="52.0" maxWidth="175.0" prefHeight="424.0" prefWidth="175.0" spacing="16.0">
+               <children>
+                  <JFXTextField fx:id="Licence_Plate_Number" labelFloat="true" prefWidth="175.0" promptText="Licence Plate Number" />
+                  <JFXTextField fx:id="OdometerReading" labelFloat="true" layoutX="10.0" layoutY="182.0" promptText="Odometer Reading" />
+                  <JFXTextField fx:id="Make" labelFloat="true" prefWidth="175.0" promptText="Make" />
+                  <JFXTextField fx:id="Model" labelFloat="true" prefWidth="175.0" promptText="Model" />
+                  <JFXTextField fx:id="Number_Of_Seats" labelFloat="true" promptText="Number of Seats" />
+                  <JFXTextField fx:id="Rental_Rate" labelFloat="true" promptText="Rental Rate" />
+               </children>
+            </VBox>
+            <VBox layoutX="213.0" layoutY="52.0" maxWidth="175.0" prefHeight="424.0" prefWidth="175.0" spacing="16.0">
+               <children>
+                  <JFXComboBox fx:id="Type" prefHeight="25.0" prefWidth="175.0" promptText="Type" />
+                  <JFXCheckBox fx:id="Has_GPS" text="Has GPS">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </JFXCheckBox>
+               </children>
+            </VBox>
+            <Label layoutX="14.0" layoutY="6.0" text="Car Details" textFill="#575757">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

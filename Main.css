@@ -1,0 +1,25 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.ConfirmButton {
+    -fx-background-color: #8BC34A;
+    -fx-text-fill: #ffffff;
+}
+
+.MenuButton {
+    -fx-background-color: #536DFE;
+    -fx-text-fill: #ffffff;
+}
+.CancelButton {
+    -fx-background-color: #EF5350;
+    -fx-text-fill: #ffffff;
+}
+.BackButton {
+    -fx-background-color: #004D40;
+    -fx-text-fill: #ffffff;
+}
